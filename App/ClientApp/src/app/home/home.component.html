@@ -1,0 +1,79 @@
+<div>
+
+  <div>
+    <label class="input-padding" for="startIncome">Starting Income</label>
+    <input id="startIncome" [(ngModel)]="StartIncome" (change)="StartIncomeChange($event)" type="number" />
+  </div>
+
+  <div>
+    <label class="input-padding" for="incomeGrowth">Income Growth</label>
+    <input id="incomeGrowth" [(ngModel)]="IncomeGrowth" type="number" />
+  </div>
+
+  <div>
+    <label class="input-padding" for="investPercentage">Invest percentage</label>
+    <input id="investPercentage" [(ngModel)]="InvestPercentage" type="number" />
+  </div>
+
+
+
+  <div>
+    <label class="input-padding" for="investmentGrowth">Investment Growth</label>
+    <input id="investmentGrowth" [(ngModel)]="InvestmentGrowth" type="number" />
+  </div>
+
+  <div>
+    <label class="input-padding" for="durationOfTime">Duration of Time</label>
+    <input id="durationOfTime" [(ngModel)]="Duration" type="number" />
+  </div>
+
+  <button (click)="calculate()">Run numbers</button>
+
+
+  <div *ngIf="HasBeenCalculated">
+      <table>
+        <thead>
+          <tr>
+            <th>
+              Year
+            </th>
+            <th>
+              Income
+            </th>
+            <th>
+              Income Spent/Saved
+            </th>
+            <th>
+              Total amount invested
+            </th>
+            <th>
+              Year investment income
+            </th>
+            <th>
+              asd
+            </th>
+          </tr>
+        </thead>
+        <tr>
+          <td>
+            qweqwe
+          </td>
+          <td>
+            qweqwe
+          </td>
+          <td>
+            qweqwe
+          </td>
+          <td>
+            qweqwe
+          </td>
+          <td>
+            qweqwe
+          </td>
+          <td>
+            qweqwe
+          </td>
+        </tr>
+      </table>
+  </div>
+</div>
