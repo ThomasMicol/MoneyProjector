@@ -13,28 +13,33 @@ export class HomeComponent {
   Duration : number = 0;
 
   HasBeenCalculated: boolean = false;
-  DataSet: any[];
+  DataSet: any[] = [];
 
   StartIncomeChange(event) {
     console.log(this);
   }
 
   calculate() {
+    this.DataSet = [];
     let iterationCount = 1;
     let income = this.StartIncome;
     let invested = 0;
 
-    while(iterationCount > this.Duration) {
+    console.log(iterationCount, this.Duration);
+    while(iterationCount <= this.Duration) {
       let split = income * (this.InvestPercentage / 100);
       let spentSplit = income - split;
       invested = invested + split;
 
+      let investGrowth = invested * (this.InvestmentGrowth / 100);
+      invested = invested + investGrowth;
+
       let newItem = {
         Year: iterationCount,
-        Income: income,
-        Split: spentSplit + " / " + split ,
-        Invested: invested,
-        YearInvestmentGrowth: 0
+        Income: income.toFixed(2),
+        Split: spentSplit.toFixed(2) + " / " + split.toFixed(2) ,
+        Invested: invested.toFixed(2),
+        YearInvestmentGrowth: investGrowth
       };
       this.DataSet.push(newItem);
       income = income * ((this.IncomeGrowth / 100) + 1);
