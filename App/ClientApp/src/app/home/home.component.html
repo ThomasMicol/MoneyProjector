@@ -2,29 +2,39 @@
 
   <div>
     <label class="input-padding" for="startIncome">Starting Income</label>
-    <input id="startIncome" [(ngModel)]="StartIncome" (change)="StartIncomeChange($event)" type="number" />
+    <div>
+      <input id="startIncome" [(ngModel)]="StartIncome" (change)="StartIncomeChange($event)" type="number" />
+    </div>
   </div>
 
   <div>
-    <label class="input-padding" for="incomeGrowth">Income Growth</label>
-    <input id="incomeGrowth" [(ngModel)]="IncomeGrowth" type="number" />
+    <label class="input-padding" for="incomeGrowth">Income Growth Percentage</label>
+    <div>
+      <input id="incomeGrowth" [(ngModel)]="IncomeGrowth" type="number" />
+    </div>
   </div>
 
   <div>
     <label class="input-padding" for="investPercentage">Invest percentage</label>
-    <input id="investPercentage" [(ngModel)]="InvestPercentage" type="number" />
+    <div>
+      <input id="investPercentage" [(ngModel)]="InvestPercentage" type="number" />
+    </div>
   </div>
 
 
 
   <div>
-    <label class="input-padding" for="investmentGrowth">Investment Growth</label>
-    <input id="investmentGrowth" [(ngModel)]="InvestmentGrowth" type="number" />
+    <label class="input-padding" for="investmentGrowth">Investment Growth Percentage</label>
+    <div>
+      <input id="investmentGrowth" [(ngModel)]="InvestmentGrowth" type="number" />
+    </div>
   </div>
 
   <div>
-    <label class="input-padding" for="durationOfTime">Duration of Time</label>
-    <input id="durationOfTime" [(ngModel)]="Duration" type="number" />
+    <label class="input-padding" for="durationOfTime">Duration of Time in years</label>
+    <div>
+      <input id="durationOfTime" [(ngModel)]="Duration" type="number" />
+    </div>
   </div>
 
   <button (click)="calculate()">Run numbers</button>
