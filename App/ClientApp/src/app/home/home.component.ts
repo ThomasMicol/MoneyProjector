@@ -22,21 +22,26 @@ export class HomeComponent {
   calculate() {
     let iterationCount = 1;
     let income = this.StartIncome;
-    
+    let invested = 0;
 
-    while (iterationCount <= this.Duration) {
+    while(iterationCount > this.Duration) {
       let split = income * (this.InvestPercentage / 100);
       let spentSplit = income - split;
+      invested = invested + split;
 
       let newItem = {
         Year: iterationCount,
         Income: income,
         Split: spentSplit + " / " + split ,
-        Invested: ,
-        YearInvestmentGrowth: 
+        Invested: invested,
+        YearInvestmentGrowth: 0
       };
+      this.DataSet.push(newItem);
+      income = income * ((this.IncomeGrowth / 100) + 1);
+      iterationCount++;
     }
     this.HasBeenCalculated = true;
+    console.log(this.DataSet);
   }
 
 }
