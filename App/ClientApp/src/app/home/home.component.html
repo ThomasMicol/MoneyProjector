@@ -47,31 +47,25 @@
               Total amount invested
             </th>
             <th>
-              Year investment income
-            </th>
-            <th>
-              asd
+              Year investment growth
             </th>
           </tr>
         </thead>
-        <tr>
+        <tr *ngFor="let rowData of DataSet">
           <td>
-            qweqwe
+            {{rowData.Year}}
           </td>
           <td>
-            qweqwe
+            {{rowData.Income}}
           </td>
           <td>
-            qweqwe
+            {{rowData.Split}}
           </td>
           <td>
-            qweqwe
+            {{rowData.Invested}}
           </td>
           <td>
-            qweqwe
-          </td>
-          <td>
-            qweqwe
+            {{rowData.YearInvestmentGrowth}}
           </td>
         </tr>
       </table>
